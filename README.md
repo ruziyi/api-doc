@@ -3,7 +3,7 @@
 ### 使用方法
 #### 1、安装扩展
 ```bash
-composer require weiwei/laravel-apidoc
+composer require jiuchen/laravel-apidoc
 ```
 
 #### 2、注册服务提供者

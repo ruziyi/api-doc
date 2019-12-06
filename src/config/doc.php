@@ -24,5 +24,5 @@ return [
         //全局公共请求参数，设置了所以的接口会自动增加次参数
         //如：['name'=>'token', 'type'=>'string', 'require'=>1, 'default'=>'', 'other'=>'' ,'desc'=>'验证（全局）')']
     ],
-    'pass' => '12345'
+    'pass' => env('API_PASS', '12345'),
 ];

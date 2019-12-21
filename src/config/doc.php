@@ -25,4 +25,5 @@ return [
         //如：['name'=>'token', 'type'=>'string', 'require'=>1, 'default'=>'', 'other'=>'' ,'desc'=>'验证（全局）')']
     ],
     'pass' => env('API_PASS', '12345'),
+    'api_host' => env('API_HOST', ''),
 ];

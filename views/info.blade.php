@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="jumbotron">
-        <p class="bg-success" style="font-size: 18px;">文档地址：{{ url('/') }}/doc?name={{ $doc['name'] }}</p>
+        <p class="bg-success" style="font-size: 18px;">文档地址：{{ config('doc.api_host') }}/doc?name={{ $doc['name'] }}</p>
         <h2>接口：{{ isset($doc['title']) ? $doc['title'] : '请设置title注释' }}</h2>
         <p>接口地址：{{ isset($doc['url']) ? $doc['url'] : '请设置url注释' }} <span class="label label-success">{{ isset($doc['method']) ? $doc['method'] : 'GET' }}</span></p>
         <p class="text-primary">{{ isset($doc['title']) ? $doc['title'] : '请设置title注释' }} -- {{ isset($doc['author']) ? $doc['author'] : '请设置auhtor注释' }}</p>
@@ -78,7 +78,7 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">接口地址</label>
                                 <div class="col-sm-6">
-                                    <input class="form-control" type="text" name="url" value='<?php echo isset($doc["url"]) ? url('/').$doc["url"] : "请设置url注释"; ?>'>
+                                    <input class="form-control" type="text" name="url" value='<?php echo isset($doc["url"]) ? config('doc.api_host').$doc["url"] : "请设置url注释"; ?>'>
                                 </div>
                                 <div class="col-sm-4"><button type="button" id="send" class="btn btn-success" data-loading-text="Loading..." autocomplete="off">发送测试</button></div>
                             </div>

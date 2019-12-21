@@ -25,7 +25,7 @@
                 <li id="index_tab" class="active"><a href="#index_tab_content" data-toggle="tab">搜索</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade in active" id="index_tab_content"><iframe id="zt_text" src="{{ Request::root() }}/doc/search" width="100%" height="100%" frameborder="0"></iframe></div>
+                <div class="tab-pane fade in active" id="index_tab_content"><iframe id="zt_text" src="/doc/search" width="100%" height="100%" frameborder="0"></iframe></div>
             </div>
         </div>
     </div>
@@ -97,13 +97,13 @@
         }
         var content_text = $("#" + tab_content).find("#zt_text");
         $(content_text).html("<p>加载中……</p>");
-        $(content_text).attr("src","{{ Request::root() }}/doc/info?name="+name);
+        $(content_text).attr("src","/doc/info?name="+name);
         initHeight();
     }
     var zTree;
     $(document).ready(function(){
         $.ajax({
-            url: "{{ Request::root() }}/doc/list",
+            url: "/doc/list",
             dataType: "json",
             success: function(data){
                 var zNodes = data.list;

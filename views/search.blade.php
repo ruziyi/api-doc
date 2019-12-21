@@ -54,7 +54,7 @@
     $(function () {
         $('#search_input').typeahead({
             source: function (query, process) {
-                $.getJSON("{{ Request::root() }}/doc/search", { "query": query }, function(data){
+                $.getJSON("/doc/search", { "query": query }, function(data){
                     var items = [];
                     $.each(data, function(index, doc){
                         items.push(doc.title);
@@ -68,7 +68,7 @@
             var $btn = $(this).button('loading');
             $.ajax({
                 type: "GET",
-                url: "{{ Request::root() }}/doc/search?query="+query,
+                url: "/doc/search?query="+query,
                 dataType:'json',
                 success: function (data) {
                     $(".result .list-group").html('');

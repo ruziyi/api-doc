@@ -52,7 +52,7 @@
                 }else{
                     $.ajax({
                         method: 'post',
-                        url: "{{ Request::root() }}/doc/login",
+                        url: "/doc/login",
                         data: {pass: $("#pass").val() },
                         dataType: "json",
                         success: function(data){

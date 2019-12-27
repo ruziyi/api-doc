@@ -163,7 +163,7 @@ class DocController extends Controller
     private function http_request($url, $cookie, $data = array(), $method = array(), $headers = array()){
         $curl = curl_init();
         if(count($data) && $method == "GET"){
-            $data = array_filter($data);
+            // $data = array_filter($data);
             $url .= "?".http_build_query($data);
             $url = str_replace(array('%5B0%5D'), array('[]'), $url);
         }
